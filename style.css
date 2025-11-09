@@ -1,74 +1,114 @@
+/* Apply to all elements */
 * {
     box-sizing: border-box;
+    /* Includes padding and border inside the element’s total width/height */
     margin: 0;
+    /* Removes default outer space */
     padding: 0;
+    /* Removes default inner space */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Sets a clean font */
 }
 
+/* Page background and spacing */
 body {
     background-color: #f7f9fc;
+    /* Light gray-blue background color */
     padding: 40px;
+    /* Adds space around the whole page */
 }
 
+/* Top section (like title or logo) */
 header {
     text-align: center;
+    /* Centers text horizontally */
     margin-bottom: 30px;
+    /* Adds space below header */
 }
 
+/* Container that holds all the cards */
 .card-container {
     display: flex;
+    /* Places cards side by side */
     justify-content: center;
+    /* Centers them horizontally */
     align-items: center;
+    /* Centers them vertically */
     gap: 20px;
+    /* Adds space between cards */
     flex-wrap: wrap;
+    /* Allows cards to move to the next line if screen is small */
 }
 
+/* Each card design */
 .card {
     background: white;
+    /* White background */
     border-radius: 10px;
+    /* Rounded corners */
     box-shadow: 0 4px 12px rgba(99, 22, 22, 0.1);
+    /* Light shadow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover animation */
 }
 
+/* What happens when mouse hovers over a card */
 .card:hover {
     transform: translateY(-8px);
+    /* Slightly lifts the card up */
     box-shadow: o 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Style for images inside each card */
 .card img {
     border-radius: 30%;
+    /* Makes image edges rounded (almost circular) */
     margin-bottom: 15px;
+    /* Adds space below the image */
 }
 
+/* Style for the card title */
 .card h2 {
     font-size: 1.2rem;
+    /* Medium-large text size */
     margin-bottom: 5px;
-}
-.card p {
-    color: black;
-    font-size: 0.9rem;
+    /* Small gap below the title */
 }
 
+/* Style for text inside card */
+.card p {
+    color: black;
+    /* Text color */
+    font-size: 0.9rem;
+    /* Slightly smaller text */
+}
+
+/* Responsive design: for screens smaller than 900px (tablets) */
 @media (max-width: 900px) {
     .card-container {
         justify-content: center;
+        /* Keeps cards centered */
         gap: 15px;
+        /* Slightly smaller gap */
     }
 
     .card {
         width: 45%;
+        /* Each card takes 45% of width */
     }
 }
 
+/* Responsive design: for screens smaller than 600px (mobiles) */
 @media (max-width: 600px) {
     .card-container {
         justify-content: center;
+        /* Centers the cards */
         align-items: center;
+        /* Vertically centers them */
     }
 
     .card {
         width: 90%;
+        /* Each card takes almost full width */
     }
-
 }
-

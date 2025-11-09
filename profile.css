@@ -1,0 +1,142 @@
+/* Reset and basic setup */
+* {
+    box-sizing: border-box;
+    /* Makes padding and borders stay inside the box size */
+    margin: 0;
+    /* Removes default outer space */
+    padding: 0;
+    /* Removes default inner space */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Sets clean readable font */
+}
+
+body {
+    background-color: #f7f9fc;
+    /* Light gray background */
+    padding: 40px;
+    /* Space around the page */
+}
+
+/* Header */
+header {
+    text-align: center;
+    /* Centers text */
+    margin-bottom: 30px;
+    /* Space below the header */
+}
+
+header h1 {
+    font-size: 2rem;
+    /* Big title text */
+    color: #333;
+    /* Dark gray color */
+}
+
+/* Card container */
+.card-container {
+    display: flex;
+    /* Puts cards next to each other in a row */
+    justify-content: center;
+    /* Centers them horizontally */
+    align-items: center;
+    /* Centers them vertically */
+    gap: 20px;
+    /* Space between cards */
+    flex-wrap: wrap;
+    /* Moves cards to a new line if screen is small */
+}
+
+/* Individual card */
+.card {
+    background: white;
+    /* White card background */
+    border-radius: 12px;
+    /* Rounded corners */
+    width: 280px;
+    /* Card width */
+    text-align: center;
+    /* Centers text inside card */
+    padding: 20px;
+    /* Space inside card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Light shadow for 3D look */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth hover animation */
+}
+
+/* When mouse goes over a card */
+.card:hover {
+    transform: translateY(-8px);
+    /* Lifts the card up slightly */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Makes shadow darker while lifted */
+}
+
+/* Card image */
+.card img {
+    width: 120px;
+    /* Image width */
+    height: 120px;
+    /* Image height */
+    border-radius: 50%;
+    /* Makes image round */
+    margin-bottom: 15px;
+    /* Space below image */
+    object-fit: cover;
+    /* Keeps image shape correct */
+}
+
+/* Card title */
+.card h2 {
+    font-size: 1.2rem;
+    /* Medium size text */
+    color: #333;
+    /* Dark color */
+    margin-bottom: 5px;
+    /* Small space below name */
+}
+
+/* Card role / text */
+.card p {
+    color: #666;
+    /* Gray color */
+    font-size: 0.95rem;
+    /* Slightly smaller text */
+}
+
+/* When screen is smaller than 900px (like tablets) */
+@media (max-width: 900px) {
+    .card-container {
+        justify-content: center;
+        /* Keeps cards centered */
+    }
+
+    .card {
+        width: 45%;
+        /* Makes each card take 45% width (2 per row) */
+    }
+}
+
+/* When screen is smaller than 600px (like phones) */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+        /* Makes each card take almost full width (1 per row) */
+    }
+}
+
+/* Footer section */
+footer {
+    text-align: center;
+    /* Centers text */
+    margin-top: 40px;
+    /* Space above footer */
+    padding-top: 10px;
+    /* Space inside top */
+    color: #555;
+    /* Gray text color */
+    border-top: 1px solid #ccc;
+    /* Line above footer */
+    font-size: 0.9rem;
+    /* Slightly small text */
+}
